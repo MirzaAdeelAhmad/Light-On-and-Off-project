@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(28, 19, 75);
+            display: grid;
+            place-items: center;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 50px;
+        }
+        .img1{
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+        }
+        .btn{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            padding: 10px;
+            background-color: yellow;
+            margin-left: 100px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .btn:hover{
+            background-color: rgb(255, 208, 0);
+            transition: 0.3s;
+        }
+        .btn2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            padding: 10px;
+            background-color: yellow;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .btn2:hover{
+            background-color: rgb(255, 196, 0);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <h1>Can you turn on the Light ?</h1>
+            
+            <button class="btn" onclick="turnOn()">Turn On the Light</button>
+            <img id="offimg" class="img1" src="images/offf bulb.png" alt="">
+            <button class="btn2" onclick="turnOff()" >Turn Off the Light</button>
+            <h3 style="margin-top: 150px; margin-left: 230px; color: white; font-weight: 100;">Developed by Adeel Mirza</h3>
+            
+        </div>
+    </div>
+
+    <script>
+    const turnOn = () =>{
+        var a = document.getElementById("offimg").src = "images/on bulb.png";
+        
+    }
+    const turnOff = () =>{
+        document.getElementById("offimg").src = "images/offf bulb.png";
+    }
+
+    </script>
+    
+</body>
+</html>
